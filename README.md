@@ -1,3 +1,5 @@
+> Mode website: https://mramirid.github.io/Algoritma-dan-Struktur-Data/
+
 # Algoritma dan Struktur Data
 
 ## Mengimplementasikan Algoritma Pencarian Beruntun
