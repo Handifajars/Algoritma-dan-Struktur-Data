@@ -4,7 +4,7 @@ Quote:
 
 # Algoritma dan Struktur Data
 
-## Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
+### 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
 
 **Kasus**
 
@@ -230,7 +230,7 @@ Nilai 700: -1
 
 Ketika mencari nilai 250, proses perbandingan hanya dilakukan 2 kali, yaitu perbandingan nilai antara 250 dengan elemen pertama & elemen kedua di dalam *array* data. Pada saat indeks pengulangan (variabel `pos`) mencapai 2, proses pengulangan akan dihentikan. Hal ini disebabkan karena nilai elemen pada indeks ke-2 (nilai 300) lebih besar dari nilai yang dicari (nilai 250). Hal ini tentu akan menghemat proses pencarian.
 
-## Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
+### 2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
 
 **Kasus**
 
@@ -240,9 +240,7 @@ Kita ingin melakukan pencarian data di dalam suatu *array* menggunakan algoritma
 
 Di dalam bahasa C, algoritma pencarian bagi-dua diimplementasikan menggunakan fungsi berikut:
 
-- **Contoh 4.c**
-
-```
+```c++
 int binary_search(int array[], int first, int last, int value) {
     int middle;
     bool found = false;
@@ -261,6 +259,155 @@ int binary_search(int array[], int first, int last, int value) {
 
     return found ? middle : -1;
 }
+```
+
+Contoh kode program di bawah ini menunjukkan penggunaan fungsi di atas:
+
+- **Contoh 4.c**
+
+```c++
+#include <stdio.h>
+#include <stdbool.h>
+
+int binary_search(int array[], int first, int last, int value) {
+    int middle;
+    bool found = false;
+
+    while (first <= last && !found) {
+        middle = (first + last) / 2;
+
+        if (array[middle] == value)
+            found = true;
+        else
+            if (value < array[middle])
+                last = middle - 1;
+            else
+                first = middle + 1;
+    }
+
+    return found ? middle : -1;
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+main(int argc, char const *argv[]) {
+    int data[5] = {100, 200, 300, 400, 500};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    /* Menampilkan elemen array */
+    printf("Isi array: ");
+    print_array(data, size);
+
+    printf("\nIndeks dari nilai 200: %d\n", binary_search(data, 0, 4, 200));
+    printf("Indeks dari nilai 400: %d\n", binary_search(data, 0, 4, 400));
+    printf("Indeks dari nilai 700: %d\n", binary_search(data, 0, 4, 700));
+    printf("Indeks dari nilai 900: %d\n", binary_search(data, 0, 4, 900));
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Isi array: [100, 200, 300, 400, 500]
+
+Indeks dari nilai 200: 1
+Indeks dari nilai 400: 3
+Indeks dari nilai 700: -1
+Indeks dari nilai 900: -1
+```
+
+**Penjelasan**
+
+Metode pencarian bagi-dua harus diterapkan untuk *array* yang datanya sudah berada dalam keadaan terurut. Maka, sebelum digunakan di dalam proses pencarian, kita perlu memastikan bahwa data di *array* telah terurut. Proses pengurutan dapat dilakukan dengan mendefinisikan fungsi lain (jika perlu).
+
+Cara kerja algoritma pencarian bagi-dua adalah dengan membagi elemen-elemen *array* menjadi 2 bagian secara berulang. Jika elemen tengah (`array[middle]`) sama dengan nilai yang dicari (`value`), maka proses pencarian dihentikan dan nilai `middle` (indeks dari elemen tengah) dinyatakan sebagai hasil. Jika nilai yang dicari lebih kecil dari elemen tengah, maka proses pencarian dilakukan pada *array* sebelah kiri. Jika lebih besar, maka proses pencarian dilakukan pada bagian *array* sebelah kanan; dengan asumsi bahwa elemen-elemen *array* terurut secara menaik (*ascending*)
+
+Algoritma pencarian bagi-dua juga dapat diimplementasikan menggunakan fungsi rekursi, seperti kode di bawah ini:
+
+```c++
+int binary_search(int array[], int first, int last, int value) {
+    if (last < first)
+        return -1;
+
+    int middle = (first + last) / 2;
+
+    if (value < array[middle])
+        return binary_search(array, first, middle - 1, value);
+    else if (value > array[middle])
+        return binary_search(array, middle + 1, last, value);
+    else
+        return middle;
+}
+```
+
+Contoh penerapannya dapat dilihat pada kode di bawah ini:
+
+```c++
+#include <stdio.h>
+#include <stdbool.h>
+
+int binary_search(int array[], int first, int last, int value) {
+    if (last < first)
+        return -1;
+
+    int middle = (first + last) / 2;
+
+    if (value < array[middle])
+        return binary_search(array, first, middle - 1, value);
+    else if (value > array[middle])
+        return binary_search(array, middle + 1, last, value);
+    else
+        return middle;
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+main(int argc, char const *argv[]) {
+    int data[5] = {100, 200, 300, 400, 500};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    /* Menampilkan elemen array */
+    printf("Isi array: ");
+    print_array(data, size);
+
+    printf("\nIndeks dari nilai 200: %d\n", binary_search(data, 0, 4, 200));
+    printf("Indeks dari nilai 400: %d\n", binary_search(data, 0, 4, 400));
+    printf("Indeks dari nilai 700: %d\n", binary_search(data, 0, 4, 700));
+    printf("Indeks dari nilai 900: %d\n", binary_search(data, 0, 4, 900));
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Isi array: [100, 200, 300, 400, 500]
+
+Indeks dari nilai 200: 1
+Indeks dari nilai 400: 3
+Indeks dari nilai 700: -1
+Indeks dari nilai 900: -1
 ```
 
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
