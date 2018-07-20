@@ -240,6 +240,27 @@ Kita ingin melakukan pencarian data di dalam suatu *array* menggunakan algoritma
 
 Di dalam bahasa C, algoritma pencarian bagi-dua diimplementasikan menggunakan fungsi berikut:
 
+- **Contoh 4.c**
 
+```
+int binary_search(int array[], int first, int last, int value) {
+    int middle;
+    bool found = false;
 
-> Sumber: Buku berjudul KUMPULAN SOLUSI PEMROGRAMAN C, ditulis oleh BUDI RAHARJO, penerbit INFORMATIKA
+    while (first <= last && !found) {
+        middle = (first + last) / 2;
+
+        if (array[middle] == value)
+            found = true;
+        else
+            if (value < array[middle])
+                last = middle - 1;
+            else
+                first = middle + 1;
+    }
+
+    return found ? middle : -1;
+}
+```
+
+> Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
