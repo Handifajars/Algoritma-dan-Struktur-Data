@@ -1,8 +1,16 @@
-Quote:
-
-> "The best way to learn to code is to code"
-
 # Algoritma dan Struktur Data
+
+### Daftar isi:
+
+1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
+   - Contoh 1.c
+   - Contoh 2.c
+   - Contoh 3.c
+2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
+   - Contoh 4.c
+   - Contoh 5.c
+3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
+
 
 ### 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
 
@@ -162,7 +170,7 @@ Nilai 900: -1
 
 Nilai -1 yang terdapat pada hasil di atas digunakan untuk mendandakan bahwa nilai yang dicari tidak ditemukan di dalam *array* data.
 
-Dua kode program yang di atas sebenarnya dapat diterapkan untuk *array* yang datanya terurut maupun tidak terurut. Akan tetapi untuk kasus *array* yang datanya terurut kita dapat melakukan penghematan proses pencarian, yaitu dengan menghentikan pencarian ketika nilai yang kita cari lebih kecil dari salah satu nilai *array* pada posisi tertentu (ini pada *array* terurut), untuk data yang berjumlah kecil tidak akan terasa, tapi untuk data yang berjumlah sangat besar baru terasa. Untuk mengimplementasikan hal ini kita dapat menggunakan kode berikut:
+Dua kode program yang di atas sebenarnya dapat diterapkan untuk *array* yang datanya terurut maupun tidak terurut. Akan tetapi untuk kasus *array* yang datanya terurut kita dapat melakukan penghematan proses pencarian, yaitu dengan menghentikan pencarian ketika nilai yang kita cari lebih kecil dari salah satu nilai *array* pada posisi tertentu (ini pada *array* terurut) atau dengan kata lain mencegah proses agar tidak melanjutkan pencarian sampai akhir data (tidak perlu dicari sampai akhir jika data yang diinginkan sudah ketemu), pada kasus ini, untuk data yang berjumlah kecil tidak akan terasa lama prosesnya, tapi untuk data yang berjumlah sangat besar akan baru terasa lama prosesnya. Untuk mengimplementasikan hal ini kita dapat menggunakan kode berikut:
 
 - **Contoh 3.c**
 
@@ -353,6 +361,8 @@ int binary_search(int array[], int first, int last, int value) {
 
 Contoh penerapannya dapat dilihat pada kode di bawah ini:
 
+- **Contoh 5.c**
+
 ```c++
 #include <stdio.h>
 #include <stdbool.h>
@@ -410,4 +420,95 @@ Indeks dari nilai 700: -1
 Indeks dari nilai 900: -1
 ```
 
+### 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
+
+**Kasus**
+
+Kita ingin melakukan pengurutan data di dalam suatu *array* menggunakan algoritma pengurutan gelembung (*bubble sort*)
+
+**Solusi**
+
+Dalam bahasa C, algoritma pengurutan gelembung dapat diimplementasikan menggunakan fungsi berikut:
+
+```c++
+void bubble_sort(int *array, int size) {
+    int temp;
+
+    for (int i = 0; i < size - 1; ++i)
+        for (int j = size - 1; j > i; --j)
+            if (array[j] < array[j - 1]) {
+                temp = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = temp;
+            }
+}
+```
+
+Contoh penggunaan fungsi bubble_sort() di atas dapat dilihat pada kode program di bawah ini:
+
+```c++
+#include <stdio.h>
+
+void bubble_sort(int *array, int size) {
+    int temp;
+
+    for (int i = 0; i < size - 1; ++i)
+        for (int j = size - 1; j > i; --j)
+            if (array[j] < array[j - 1]) {
+                temp = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = temp;
+            }
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+main(int argc, char const *argv[]) {
+    int data[8] = {9, 7, 10, 8, 12, 11, 14, 13};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    bubble_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Sebelum diurutkan: [9, 7, 10, 8, 12, 11, 14, 13]
+Setelah diurutkan: [7, 8, 9, 10, 11, 12, 13, 14]
+```
+
+**Penjelasan**
+
+Dalam proses pengurutan data menggunakan algoritma gelembung, n elemen data akan diurutkan melalui n-1 langkah (direpresentasikan menggunakan variabel `i`). Dalam setiap langkah, program akan membandingkan elemen ke-`j` dengan elemen ke-(`j-1`) secara berulang mulai dari elemen terakhir sampai elemen ke-(`i+1`). Jika `array[j]` lebih kecil dari `array[j-1]` maka kedua elemen tersebut akan ditukar menggunakan kode berikut:
+
+```c++
+temp = array[j];
+array[j] = array[j - 1];
+array[j - 1] = temp;
+```
+
+Elemen yang sudah terurut pada langkah pertama akan diisolasi dan tidak akan dilibatkan dalam proses perbandingan elemen di langkah kedua. Elemen yang sudah terurut pada langkah kedua tidak akan dilibatkan dalam proses perbandingan di langkah ketiga, dan seterusnya.
+
+Untuk memudahkan dalam 
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
