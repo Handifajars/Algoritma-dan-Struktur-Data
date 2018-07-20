@@ -1,37 +1,90 @@
-## Welcome to GitHub Pages
+# Algoritma dan Struktur Data
 
-You can use the [editor on GitHub](https://github.com/mramirid/Algoritma-dan-Struktur-Data/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Mengimplementasikan Algoritma Pencarian Beruntun
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Ketika kamu ingin melakukan pencarian data di dalam suatu array, kamu bisa menggunakan algoritma pencarian beruntun (*sequential search*)
 
-### Markdown
+Di dalam bahasa C, algoritma pencarian berutun dapat diimplementasikan menggunakan fungsi berikut:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```c++
+bool sequential_search(int array[], size_t size, int value) {
+    int pos = 0;
+    bool found = false;
 
-```markdown
-Syntax highlighted code block
+    while (pos < size && !found) {
+        if (array[pos] == value)
+            found = true;
+        else
+            pos += 1;
+    }
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    return found;
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Contoh penggunaan dari fungsi di atas dapat dilihat pada kode program di bawah ini:
 
-### Jekyll Themes
+```c++
+#include <stdio.h>
+#include <stdbool.h>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mramirid/Algoritma-dan-Struktur-Data/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+bool sequential_search(int array[], size_t size, int value) {
+    int pos = 0;
+    bool found = false;
 
-### Support or Contact
+    while (pos < size && !found) {
+        if (array[pos] == value)
+            found = true;
+        else
+            pos += 1;
+    }
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    return found;
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+
+int main(int argc, char const *argv[]) {
+    int data[5] = {300, 200, 500, 400, 100};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    /* Menampilkan elemen dari array */
+    printf("Isi array: ");
+    print_array(data, size);
+
+    /* Mencari nilai */
+    printf("\nNilai 200 %s\n", sequential_search(data, size, 200) ? "ditemukan" : "tidak ditemukan");
+    printf("Nilai 400 %s\n", sequential_search(data, size, 400) ? "ditemukan" : "tidak ditemukan");
+    printf("Nilai 700 %s\n", sequential_search(data, size, 700) ? "ditemukan" : "tidak ditemukan");
+    printf("Nilai 900 %s\n", sequential_search(data, size, 900) ? "ditemukan" : "tidak ditemukan");
+
+    return 0;
+}
+```
+
+Hasil Program:
+
+```
+Isi array: [300, 200, 500, 400, 100]
+
+Nilai 200 ditemukan
+Nilai 400 ditemukan
+Nilai 700 tidak ditemukan
+Nilai 900 tidak ditemukan
+```
+
+**Penjelasan**
+
+Dengan menggunakan metode pencarian beruntun (*sequential search*) atau yang juga disebut dengan pencarian lurus (*linear search*), nilai yang dicari dibandingkan dengan nilai dari setiap elemen array data, mulai dari elemen pertama sampai nilai yang dicari ditemukan atau sampai elemen terakhir.
+
+Pada contoh kode program di atas, fungsi `sequential_search()` akan mengembalikan nilai `true` jika nilai yang dicari ditemukan di dalam array data dan `false` jika tidak ditemukan.
