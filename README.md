@@ -218,4 +218,4 @@ Nilai 700: -1
 
 Ketika mencari nilai 250, proses perbandingan hanya dilakukan 2 kali, yaitu perbandingan nilai antara 250 dengan elemen pertama & elemen kedua id dalam array data. Pada saat indeks pengulangan (variabel 'pos') mencapai 2, proses pengulangan akan dihentikan. Hal ini disebabkan karena nilai elemen pada indeks ke-2 (nilai 300) lebih besar dari nilai yang dicari (nilai 250). Hal ini tentu akan menghemat proses pencarian.
 
-> Sumber: Buku berjudul KUMPULAN SOLUSI PEMROGRAMAN C, karya BUDI RAHARJO, penerbit INFORMATIKA
+> Sumber: Buku berjudul KUMPULAN SOLUSI PEMROGRAMAN C, ditulis oleh BUDI RAHARJO, penerbit INFORMATIKA
