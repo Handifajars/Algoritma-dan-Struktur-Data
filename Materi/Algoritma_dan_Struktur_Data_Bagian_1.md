@@ -41,7 +41,7 @@ bool sequential_search(int array[], size_t size, int value) {
 
 Contoh penggunaan dari fungsi di atas dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 1.c**
+- **Contoh 1.c** [File](../src/Contoh_1.c)
 
 ```c
 #include <stdio.h>
@@ -108,7 +108,7 @@ Dengan menggunakan metode pencarian beruntun (*sequential search*) atau yang jug
 
 Pada contoh kode program di atas, fungsi `sequential_search()` akan mengembalikan nilai `true` jika nilai yang dicari ditemukan di dalam *array* data dan `false` jika tidak ditemukan. Pada beberapa kasus, terkadang kita ingin mengetahui indeks dari nilai yang ditemukan, bukan hanya sekedar informasi `true` atau `false` saja. Untuk memenuhi kebutuhan seperti ini, kita dapat memodifikasi kode di atas menjadi seperti berikut:
 
-- **Contoh 2.c**
+- **Contoh 2.c** [File](../src/Contoh_2.c)
 
 ```c
 #include <stdio.h>
@@ -173,7 +173,7 @@ Nilai -1 yang terdapat pada hasil di atas digunakan untuk mendandakan bahwa nila
 
 Dua kode program yang di atas sebenarnya dapat diterapkan untuk *array* yang datanya terurut maupun tidak terurut. Akan tetapi untuk kasus *array* yang datanya terurut kita dapat melakukan penghematan proses pencarian, yaitu dengan menghentikan pencarian ketika nilai yang kita cari lebih kecil dari salah satu nilai *array* pada posisi tertentu (ini pada *array* terurut) atau dengan kata lain mencegah proses agar tidak melanjutkan pencarian sampai akhir data (tidak perlu dicari sampai akhir jika data yang diinginkan sudah ketemu), pada kasus ini, untuk data yang berjumlah kecil tidak akan terasa lama prosesnya, tapi untuk data yang berjumlah sangat besar akan baru terasa lama prosesnya. Untuk mengimplementasikan hal ini kita dapat menggunakan kode berikut:
 
-- **Contoh 3.c**
+- **Contoh 3.c** [File](../src/Contoh_3.c)
 
 ```c
 #include <stdio.h>
@@ -272,7 +272,7 @@ int binary_search(int array[], int first, int last, int value) {
 
 Contoh kode program di bawah ini menunjukkan penggunaan fungsi di atas:
 
-- **Contoh 4.c**
+- **Contoh 4.c** [File](../src/Contoh_4.c)
 
 ```c
 #include <stdio.h>
@@ -363,7 +363,7 @@ int binary_search(int array[], int first, int last, int value) {
 
 Contoh penerapannya dapat dilihat pada kode di bawah ini:
 
-- **Contoh 5.c**
+- **Contoh 5.c** [File](../src/Contoh_5.c)
 
 ```c
 #include <stdio.h>
@@ -449,7 +449,7 @@ void bubble_sort(int *array, int size) {
 
 Contoh penggunaan fungsi bubble_sort() di atas dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 6.c**
+- **Contoh 6.c** [File](../src/Contoh_6.c)
 
 ```c
 #include <stdio.h>
@@ -517,7 +517,7 @@ Elemen yang sudah terurut pada langkah pertama akan diisolasi dan tidak akan dil
 
 Untuk memudahkan dalam memahami cara kerja algoritma pengurutan gelembung kita dapat mengubah kode program sebelumnya menjadi seperti berikut:
 
-- **Contoh 7.c**
+- **Contoh 7.c** [File](../src/Contoh_7.c)
 
 ```c
 #include <stdio.h>
@@ -588,7 +588,7 @@ Pada contoh program di atas kita mengurutkan data yang elemennya berjumlah 9. Ol
 
 Metode yang digunakan di atas adalah dengan menempatkan elemen terkecil di posisi paling kiri. Setelah itu elemen tersebut diisolasi atau diikat dan tidak dilibatkan pada proses berikutnya. Dalam metode tersebut, elemen-elemen kiri merupakan elemen-elemen yang sudah terurut. Kita juga dapat menggunakan metode lain untuk mengimplementasikan algoritma pengurutan gelembung, yaitu dengan menempatkan elemen terbesar di posisi paling kanan dan elemen tersebut tidak dilibatkan pada proses berikutnya. Dengan cara seperti ini, elemen-elemen kanan akan menjadi elemen-elemen yang pertama kali diurutkan. Kode di bawah ini akan menunjukan konsep tersebut:
 
-- **Contoh 8.c**
+- **Contoh 8.c** [File](../src/Contoh_8.c)
 
 ```c
 #include <stdio.h>
