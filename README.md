@@ -13,9 +13,9 @@
 
 - **Materi di bawah ini dapat ditemukan di ->** [Struktur Data](/Materi/Struktur_Data.md)
 
-7. Membuat Struktur Data Tumpukan (Stack) dengan Array
-8. Membuat Struktur Data Antrian (Queue) dengan Array
-9. Mengimplementasikan Singly Linked List
-10. Membuat Struktur Data Tumpukan (Stack) dengan Linked List
-11. Membuat Struktur Data Antrian (Queue) dengan Linked List
+1. Membuat Struktur Data Tumpukan (*Stack*) dengan *Array*
+2. Membuat Struktur Data Antrian (*Queue*) dengan *Array*
+3. Mengimplementasikan *Singly Linked List*
+4. Membuat Struktur Data Tumpukan (*Stack*) dengan *Linked List*
+5. Membuat Struktur Data Antrian (*Queue*) dengan *Linked List*
 
