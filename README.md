@@ -1,5 +1,7 @@
 # Algoritma dan Struktur Data
 
+> Maaf, saya bagi menjadi 2 karena materi terlalu panjang untuk 1 halaman
+
 ### Daftar isi:
 
 - **Materi di bawah ini dapat ditemukan di ->** [Algoritma dan Struktur Data Bagian 1](/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md)
