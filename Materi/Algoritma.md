@@ -13,6 +13,8 @@
 5. [Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/master/Materi/Algoritma.md#5-mengimplementasikan-algoritma-pengurutan-sisipan-insertion-sort)
 6. [Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/master/Materi/Algoritma.md#6-mengimplementasikan-algoritma-pengurutan-shell-shell-sort)
 
+---
+
 ## 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
 
 **Kasus**
@@ -239,6 +241,8 @@ Nilai 700: -1
 
 Ketika mencari nilai 250, proses perbandingan hanya dilakukan 2 kali, yaitu perbandingan nilai antara 250 dengan elemen pertama & elemen kedua di dalam *array* data. Pada saat indeks pengulangan (variabel `pos`) mencapai 2, proses pengulangan akan dihentikan. Hal ini disebabkan karena nilai elemen pada indeks ke-2 (nilai 300) lebih besar dari nilai yang dicari (nilai 250). Hal ini tentu akan menghemat proses pencarian.
 
+---
+
 ## 2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
 
 **Kasus**
@@ -422,6 +426,8 @@ Indeks dari nilai 400: 3
 Indeks dari nilai 700: -1
 Indeks dari nilai 900: -1
 ```
+
+---
 
 ## 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
 
@@ -676,6 +682,8 @@ Setelah diurutkan: [8, 9, 10, 11, 12, 13, 14]
 
 Seperti yang kita lihat pada hasil di atas, kali ini nilai terbesar yang akan diproses terlebih dahulu untuk ditempatkan pada posisi paling kanan. Dalam contoh di atas, pada langkah pertama program akan menempatkan nilai 14 pada posisi paling kanan. Pada langkah kedua, nilai 14 tidak dilibatkan lagi, sehingga nilai terbesarnya menjadi 13. Nilai 13 tersebut kemudian ditempatkan di sebelah kiri nilai 14. Pada langkah ketiga, nilai 13 juga tidak dilibatkan lagi dalam proses pengurutan. Demikian seterusnya semua elemen berada pada posisi yang tepat.
 
+---
+
 ## 4. Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)
 
 **Kasus**
@@ -920,6 +928,8 @@ main(int argc, char const *argv[]) {
 }
 ```
 
+---
+
 ## 5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
 
 **Kasus**
@@ -1085,6 +1095,8 @@ Menyisipkan nilai 8     : [4, 5, 6, 7, 8, 9, 10, 11, 12]
 Setelah diurutkan       : [4, 5, 6, 7, 8, 9, 10, 11, 12]
 ```
 
+---
+
 ## 6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
 
 **Kasus**
@@ -1198,5 +1210,7 @@ Setelah diurutkan: [4, 5, 6, 7, 8, 9, 10, 11, 12]
 **Penjelasan**
 
 Algoritma pengurutan *Shell* merupakan bentuk penyederhanaan dari algoritma pengurutan sisipan. Dengan demikian, pada dasarnya pengurutan *Shell* juga menggunakan algoritma pengurutan sisipan. Namun, dalam algoritma pengurutan *Shell*, elemen-elemen *array* dibagi menjadi beberapa *sub_array*. Selanjutnya, setiap *sub_array* tersebut diurutkan menggunakan algoritma sisipan. Hal ini bertujuan untuk mengurangi banyaknya proses pergeseran elemen yang terjadi di dalam algoritma pengurutan sisipan.
+
+---
 
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
