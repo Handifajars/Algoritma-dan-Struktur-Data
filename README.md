@@ -11,7 +11,7 @@
 5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
 6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
 
-- **Materi di bawah ini dapat ditemukan di ->** [Algoritma dan Struktur Data Bagian 2](/Materi/Algoritma-dan-Struktur-Data-Bagian-2.md)
+- **Materi di bawah ini dapat ditemukan di ->** [Algoritma dan Struktur Data Bagian 2](/Materi/Algoritma_dan_Struktur_Data_Bagian_2.md)
 
 7. Membuat Struktur Data Tumpukan (Stack) dengan Array
 8. Membuat Struktur Data Antrian (Queue) dengan Array
