@@ -1,6 +1,6 @@
 [**KEMBALI**](../README.md)
 
-# Algoritma dan Struktur Data Bagian 1
+# Algoritma
 
 **File ini berisi materi:**
 
