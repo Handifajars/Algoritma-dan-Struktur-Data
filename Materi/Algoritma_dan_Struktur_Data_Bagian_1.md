@@ -931,13 +931,272 @@ Kita ingin melakukan pengurutan data di dalam suatu *array* dengan menggunakan a
 Di dalam bahasa C, algoritma pengurutan sisipan dapat diimplementasikan menggunakan fungsi berikut:
 
 ```c
+void insertion_sort(int *array, size_t size) {
+    int currentvalue, position;
 
+    for (int i = 1; i < size; ++i) {
+        currentvalue = array[i];
+        position = i;
+
+        
+        while (position > 0 && array[position - 1] > currentvalue) {
+            array[position] = array[position - 1];
+            --position;
+        }
+        
+        array[position] = currentvalue;
+    }
+}
 ```
 
 Contoh penggunaannya dapat dilihat pada kode program di bawah ini:
 
 - **Contoh 12.c** [File](../src/Contoh_12.c)
 
+```c
+#include <stdio.h>
 
+void insertion_sort(int *array, size_t size) {
+    int currentvalue, position;
+
+    for (int i = 1; i < size; ++i) {
+        currentvalue = array[i];
+        position = i;
+
+        while (position > 0 && array[position - 1] > currentvalue) {
+            array[position] = array[position - 1];
+            --position;
+        }
+        
+        array[position] = currentvalue;
+    }
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+int main(int argc, char const *argv[]) {
+    int data[9] = {12, 10, 6, 11, 5, 4, 7, 9, 8};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    insertion_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Sebelum diurutkan: [12, 10, 6, 11, 5, 4, 7, 9, 8]
+Setelah diurutkan: [4, 5, 6, 7, 8, 9, 10, 11, 12]
+```
+
+**Penjelasan**
+
+Pada algoritma pengurutan sisipan, program akan menyisipkan suatu elemen *array* pada posisi yang sesuai. Posisi tersebut dicari dengan cara membandingkan suatu elemen dengan elemen-elemen sebelumnya. Pada algoritma ini, mula-mula elemen pertama dianggap telah berada pada posisi yang tepat. Selanjutnya, elemen kedua akan dibandingkan dengan elemen pertama. Jika elemen pertama lebih besar dari elemen kedua, maka elemen pertama akan digeser menjadi elemen kedua dan elemen kedua sebelumnya akan disisipkan pada posisi pertama. Setelah itu, elemen ketiga akan dibandingkan dengan elemen kedua dan pertama. Jika elemen kedua lebih besar dari elemen ketiga, maka elemen kedua akan digeser ke kanan. Selanjutnya, elemen ketiga akan dibandingkan lagi dengan elemen pertama. Jika elemen pertama lebih besar dari elemen ketiga, maka elemen pertama juga akan digeser ke kanan dan elemen ketiga akan disisipkan pada posisi pertama. Jika elemen pertama lebih kecil dari elemen ketiga, maka elemen ketiga akan disisipkan pada posisi kedua. Demikian seterusnya sampai semua elemen di dalam *array* diproses.
+
+Untuk lebih mudah dalam memahami proses di dalam algoritma pengurutan sisipan, kita dapat mengubah kode program di atas menjadi seperti berikut:
+
+- **Contoh 13.c** [File](../src/Contoh_13.c)
+
+```c
+#include <stdio.h>
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+void insertion_sort(int *array, size_t size) {
+    int currentvalue, position;
+
+    for (int i = 1; i < size; ++i) {
+        currentvalue = array[i];
+        position = i;
+        printf("Menyisipkan nilai %d\t: ", currentvalue);
+        
+        while (position > 0 && array[position - 1] > currentvalue) {
+            array[position] = array[position - 1];
+            --position;
+        }
+        
+        array[position] = currentvalue;
+        print_array(array, size);
+    }
+}
+
+int main(int argc, char const *argv[]) {
+    int data[9] = {12, 10, 6, 11, 5, 4, 7, 9, 8};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    insertion_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Sebelum diurutkan       : [12, 10, 6, 11, 5, 4, 7, 9, 8]
+
+Menyisipkan nilai 10    : [10, 12, 6, 11, 5, 4, 7, 9, 8]
+Menyisipkan nilai 6     : [6, 10, 12, 11, 5, 4, 7, 9, 8]
+Menyisipkan nilai 11    : [6, 10, 11, 12, 5, 4, 7, 9, 8]
+Menyisipkan nilai 5     : [5, 6, 10, 11, 12, 4, 7, 9, 8]
+Menyisipkan nilai 4     : [4, 5, 6, 10, 11, 12, 7, 9, 8]
+Menyisipkan nilai 7     : [4, 5, 6, 7, 10, 11, 12, 9, 8]
+Menyisipkan nilai 9     : [4, 5, 6, 7, 9, 10, 11, 12, 8]
+Menyisipkan nilai 8     : [4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+Setelah diurutkan       : [4, 5, 6, 7, 8, 9, 10, 11, 12]
+```
+
+# 5. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
+
+**Kasus**
+
+Kita ingin melakukan pengurutan data di dalam suatu *array* dengan menggunakan algoritma pengurutan *Shell* (*shell sort*)
+
+**Solusi**
+
+Algoritma pengurutan *Shell* dapat diimplementasikan dengan menggunakan dua fungsi berikut:
+
+```c
+void insertion_sort(int *array, size_t size, int start, int step) {
+    int currentvalue, position;
+
+    for (int i = start + step; i < size; i += step) {
+        currentvalue = array[i];
+        position = i;
+        
+        while (position >= step && array[position - step] > currentvalue) {
+            array[position] = array[position - step];
+            position -= step;
+        }
+
+        array[position] = currentvalue;
+    }
+}
+
+void shell_sort(int *array, size_t size) {
+    int step = size / 2;
+
+    while (step > 0) {
+        for (int i = 0; i < step; ++i)
+            insertion_sort(array, size, i, step);
+
+        step /= 2;
+    }
+}
+```
+
+Contoh penggunaan fungsi 'shell_sort()' dapat dilihat pada kode program di bawah ini:
+
+- **Contoh 14.c** [File](../src/Contoh_14.c)
+
+```c
+#include <stdio.h>
+
+void insertion_sort(int *array, size_t size, int start, int step) {
+    int currentvalue, position;
+
+    for (int i = start + step; i < size; i += step) {
+        currentvalue = array[i];
+        position = i;
+        
+        while (position >= step && array[position - step] > currentvalue) {
+            array[position] = array[position - step];
+            position -= step;
+        }
+
+        array[position] = currentvalue;
+    }
+}
+
+void shell_sort(int *array, size_t size) {
+    int step = size / 2;
+
+    while (step > 0) {
+        for (int i = 0; i < step; ++i)
+            insertion_sort(array, size, i, step);
+
+        step /= 2;
+    }
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+int main(int argc, char const *argv[]) {
+    int data[9] = {12, 10, 6, 11, 5, 4, 7, 9, 8};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    shell_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Sebelum diurutkan: [12, 10, 6, 11, 5, 4, 7, 9, 8]
+Setelah diurutkan: [4, 5, 6, 7, 8, 9, 10, 11, 12]
+```
+
+**Penjelasan**
+
+Algoritma pengurutan *Shell* merupakan bentuk penyederhanaan dari algoritma pengurutan sisipan. Dengan demikian, pada dasarnya pengurutan *Shell* juga menggunakan algoritma pengurutan sisipan. Namun, dalam algoritma pengurutan *Shell*, elemen-elemen *array* dibagi menjadi beberapa *sub_array*. Selanjutnya, setiap *sub_array* tersebut diurutkan menggunakan algoritma sisipan. Hal ini bertujuan untuk mengurangi banyaknya proses pergeseran elemen yang terjadi di dalam algoritma pengurutan sisipan.
 
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
