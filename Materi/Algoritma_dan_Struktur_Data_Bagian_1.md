@@ -4,12 +4,12 @@
 
 **File ini berisi materi:**
 
-1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*) [Klik](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#1-mengimplementasikan-algoritma-pencarian-beruntun-sequential-search)
-2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
-3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
-4. Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)
-5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
-6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
+1. [Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#1-mengimplementasikan-algoritma-pencarian-beruntun-sequential-search)
+2. [Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#2-mengimplementasikan-algoritma-pencarian-bagi-dua-binary-search)
+3. [Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#3-mengimplementasikan-algoritma-pengurutan-gelembung-bubble-sort)
+4. [Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)]()
+5. [Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)]()
+6. [Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)]()
 
 
 
