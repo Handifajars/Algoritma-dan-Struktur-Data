@@ -9,7 +9,7 @@
 1. [Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#1-mengimplementasikan-algoritma-pencarian-beruntun-sequential-search)
 2. [Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#2-mengimplementasikan-algoritma-pencarian-bagi-dua-binary-search)
 3. [Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#3-mengimplementasikan-algoritma-pengurutan-gelembung-bubble-sort)
-4. [Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)]()
+4. [Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#4-mengimplementasikan-algoritma-pengurutan-seleksi-selection-sort)
 5. [Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)]()
 6. [Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)]()
 
@@ -919,5 +919,25 @@ main(int argc, char const *argv[]) {
     return 0;
 }
 ```
+
+## 5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
+
+**Kasus**
+
+Kita ingin melakukan pengurutan data di dalam suatu *array* dengan menggunakan algoritma pengurutan sisipan (*insertion sort*)
+
+**Solusi**
+
+Di dalam bahasa C, algoritma pengurutan sisipan dapat diimplementasikan menggunakan fungsi berikut:
+
+```c
+
+```
+
+Contoh penggunaannya dapat dilihat pada kode program di bawah ini:
+
+- **Contoh 12.c** [File](../src/Contoh_12.c)
+
+
 
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
