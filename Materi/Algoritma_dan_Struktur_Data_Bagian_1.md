@@ -4,7 +4,7 @@
 
 **File ini berisi materi:**
 
-1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
+1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*) [Klik](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#1-mengimplementasikan-algoritma-pencarian-beruntun-sequential-search)
 2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
 4. Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)
