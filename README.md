@@ -1,6 +1,6 @@
 # Algoritma dan Struktur Data
 
-### Daftar isi:
+## Algoritma
 
 - **Materi di bawah ini dapat ditemukan di ->** [Algoritma](/Materi/Algoritma.md)
 
@@ -10,6 +10,10 @@
 4. Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)
 5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
 6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
+
+----------------------------------------------------------------------------------
+
+## Struktur Data
 
 - **Materi di bawah ini dapat ditemukan di ->** [Struktur Data](/Materi/Struktur_Data.md)
 
