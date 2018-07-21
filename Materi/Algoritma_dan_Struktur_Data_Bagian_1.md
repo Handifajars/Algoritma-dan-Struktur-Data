@@ -1,4 +1,4 @@
-[KEMBALI KE ROOT](../README.md)
+[**KEMBALI**](../README.md)
 
 # Algoritma dan Struktur Data Bagian 1
 
