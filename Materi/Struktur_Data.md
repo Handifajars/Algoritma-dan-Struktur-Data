@@ -2,7 +2,7 @@
 
 # Struktur Data
 
-**Daftar isi:**
+**File ini berisi:**
 
 > Klik salah satu untuk menuju ke pembahasan
 
