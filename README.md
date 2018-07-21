@@ -1,4 +1,4 @@
-# Algoritma dan Struktur Data
+# Algoritma dan Struktur Data Bagian 1
 
 ### Daftar isi:
 
