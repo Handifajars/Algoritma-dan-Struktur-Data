@@ -4,6 +4,8 @@
 
 **File ini berisi materi:**
 
+> Klik untuk menuju ke materi
+
 1. [Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#1-mengimplementasikan-algoritma-pencarian-beruntun-sequential-search)
 2. [Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#2-mengimplementasikan-algoritma-pencarian-bagi-dua-binary-search)
 3. [Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#3-mengimplementasikan-algoritma-pengurutan-gelembung-bubble-sort)
@@ -11,9 +13,7 @@
 5. [Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)]()
 6. [Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)]()
 
-
-
-### 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
+## 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
 
 **Kasus**
 
@@ -239,7 +239,7 @@ Nilai 700: -1
 
 Ketika mencari nilai 250, proses perbandingan hanya dilakukan 2 kali, yaitu perbandingan nilai antara 250 dengan elemen pertama & elemen kedua di dalam *array* data. Pada saat indeks pengulangan (variabel `pos`) mencapai 2, proses pengulangan akan dihentikan. Hal ini disebabkan karena nilai elemen pada indeks ke-2 (nilai 300) lebih besar dari nilai yang dicari (nilai 250). Hal ini tentu akan menghemat proses pencarian.
 
-### 2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
+## 2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
 
 **Kasus**
 
@@ -423,7 +423,7 @@ Indeks dari nilai 700: -1
 Indeks dari nilai 900: -1
 ```
 
-### 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
+## 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
 
 **Kasus**
 
@@ -447,7 +447,7 @@ void bubble_sort(int *array, int size) {
 }
 ```
 
-Contoh penggunaan fungsi bubble_sort() di atas dapat dilihat pada kode program di bawah ini:
+Contoh penggunaan fungsi `bubble_sort()` di atas dapat dilihat pada kode program di bawah ini:
 
 - **Contoh 6.c** [File](../src/Contoh_6.c)
 
@@ -573,6 +573,7 @@ Hasil program:
 
 ```
 Sebelum diurutkan: [12, 10, 6, 11, 5, 4, 7, 9, 8]
+
 Langkah ke-1: [4, 12, 10, 6, 11, 5, 7, 8, 9]
 Langkah ke-2: [4, 5, 12, 10, 6, 11, 7, 8, 9]
 Langkah ke-3: [4, 5, 6, 12, 10, 7, 11, 8, 9]
@@ -581,12 +582,29 @@ Langkah ke-5: [4, 5, 6, 7, 8, 12, 10, 9, 11]
 Langkah ke-6: [4, 5, 6, 7, 8, 9, 12, 10, 11]
 Langkah ke-7: [4, 5, 6, 7, 8, 9, 10, 12, 11]
 Langkah ke-8: [4, 5, 6, 7, 8, 9, 10, 11, 12]
+
 Setelah diurutkan: [4, 5, 6, 7, 8, 9, 10, 11, 12]
 ```
 
 Pada contoh program di atas kita mengurutkan data yang elemennya berjumlah 9. Oleh karena itu, diperlukan 8 langkah untuk mengurutkan data tersebut. Posisi elemen pada setiap langkah dapat kita lihat pada hasil yang ditampilkan di atas.
 
 Metode yang digunakan di atas adalah dengan menempatkan elemen terkecil di posisi paling kiri. Setelah itu elemen tersebut diisolasi atau diikat dan tidak dilibatkan pada proses berikutnya. Dalam metode tersebut, elemen-elemen kiri merupakan elemen-elemen yang sudah terurut. Kita juga dapat menggunakan metode lain untuk mengimplementasikan algoritma pengurutan gelembung, yaitu dengan menempatkan elemen terbesar di posisi paling kanan dan elemen tersebut tidak dilibatkan pada proses berikutnya. Dengan cara seperti ini, elemen-elemen kanan akan menjadi elemen-elemen yang pertama kali diurutkan. Kode di bawah ini akan menunjukan konsep tersebut:
+
+```c
+void bubble_sort(int *array, size_t size) {
+    int temp;
+
+    for (int i = size - 1; i > 0; --i)
+        for (int j = 0; j < i; ++j)
+            if (array[j] > array[j + 1]) {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+}
+```
+
+Jika ingin melihat posisi elemen-elemen pada setiap langkah, kita dapat mengubah kode di atas menjadi seperti berikut:
 
 - **Contoh 8.c** [File](../src/Contoh_8.c)
 
@@ -644,6 +662,262 @@ main(int argc, char const *argv[]) {
 Hasil program:
 
 ```
+Sebelum diurutkan: [14, 13, 12, 11, 10, 9, 8]
+
+Langkah ke-1: [13, 12, 11, 10, 9, 8, 14]
+Langkah ke-2: [12, 11, 10, 9, 8, 13, 14]
+Langkah ke-3: [11, 10, 9, 8, 12, 13, 14]
+Langkah ke-4: [10, 9, 8, 11, 12, 13, 14]
+Langkah ke-5: [9, 8, 10, 11, 12, 13, 14]
+Langkah ke-6: [8, 9, 10, 11, 12, 13, 14]
+
+Setelah diurutkan: [8, 9, 10, 11, 12, 13, 14]
+```
+
+Seperti yang kita lihat pada hasil di atas, kali ini nilai terbesar yang akan diproses terlebih dahulu untuk ditempatkan pada posisi paling kanan. Dalam contoh di atas, pada langkah pertama program akan menempatkan nilai 14 pada posisi paling kanan. Pada langkah kedua, nilai 14 tidak dilibatkan lagi, sehingga nilai terbesarnya menjadi 13. Nilai 13 tersebut kemudian ditempatkan di sebelah kiri nilai 14. Pada langkah ketiga, nilai 13 juga tidak dilibatkan lagi dalam proses pengurutan. Demikian seterusnya semua elemen berada pada posisi yang tepat.
+
+## 4. Mengimplementasikan Algoritma Pengurutan Seleksi (*Selection Sort*)
+
+**Kasus**
+
+Kita ingin melakukan pengurutan data di dalam suatu *array* dengan menggunakan algoritma pengurutan seleksi (*selection sort*)
+
+**Solusi**
+
+Algoritma pengurutan seleksi dapat diimplementasikan dengan menggunakan fungsi berikut:
+
+```c
+void selection_sort(int *array, int size) {
+    int minposition, temp;
+
+    for (int i = 0; i < size - 1; ++i) {
+        minposition = size - 1;
+
+        for (int j = size - 2; j > i - 1; --j)
+            if (array[j] < array[minposition])
+                minposition = j;
+
+        temp = array[i];
+        array[i] = array[minposition];
+        array[minposition] = temp;
+    }
+}
 
 ```
+
+Contoh penggunaan fungsi `selection_sort()` di atas dapat dilihat pada kode program di bawah ini:
+
+- **Contoh 9.c** [File](../src/Contoh_9.c)
+
+```c
+#include <stdio.h>
+
+void selection_sort(int *array, int size) {
+    int minposition, temp;
+
+    for (int i = 0; i < size - 1; ++i) {
+        minposition = size - 1;
+
+        for (int j = size - 2; j > i - 1; --j)
+            if (array[j] < array[minposition])
+                minposition = j;
+
+        temp = array[i];
+        array[i] = array[minposition];
+        array[minposition] = temp;
+    }
+}
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+main(int argc, char const *argv[]) {
+    int data[8] = {9, 7, 10, 8, 12, 11, 14 , 13};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    selection_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil Program:
+
+```
+Sebelum diurutkan: [9, 7, 10, 8, 12, 11, 14, 13]
+Setelah diurutkan: [7, 8, 9, 10, 11, 12, 13, 14]
+```
+
+**Penjelasan**
+
+Pada algoritma pengurutan seleksi, kita mencari posisi dari elemen terkecil. Proses pencarian itu sendiri dilakukan dari elemen terakhir atau paling kanan sampai elemen pertama atau paling kiri. Setelah ditemukannya posisi dari elemen terkecil, elemen pada posisi tersebut ditukar dengan elemen paling kiri. Selanjutnya, elemen tersebut akan diisolasi dan tidak dilibatkan pada proses berikutnya. Proses ini akan diulang sampai semua elemen di dalam *array* terurut. Jumlah langkah yang dibutuhkan pada algoritma pengurutan seleksi sama dengan jumlah langkah pada algoritma pengurutan gelembung, yaitu n-1, dengan n adalah jumlah elemen yang terdapat di dalam *array*. Perbedaannya, proses pertukaran elemen pada setiap langkah di dalam algoritma pengurutan seleksi hanya dilakukan sekali.
+
+Untuk mengetahui posisi elemen pada setiap langkah, kita dapat mengubah kode program di atas menjadi seperti berikut:
+
+- **Contoh 10.c** [File](../src/Contoh_10.c)
+
+```c
+#include <stdio.h>
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+void selection_sort(int *array, int size) {
+    int minposition, temp;
+
+    for (int i = 0; i < size - 1; ++i) {
+        printf("Langkah ke-%d: ", i + 1);
+
+        minposition = size - 1;
+
+        for (int j = size - 2; j > i - 1; --j)
+            if (array[j] < array[minposition])
+                minposition = j;
+
+        temp = array[i];
+        array[i] = array[minposition];
+        array[minposition] = temp;
+
+        print_array(array, size);
+    }
+}
+
+main(int argc, char const *argv[]) {
+    int data[8] = {9, 7, 10, 8, 12, 11, 14 , 13};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    selection_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil Program:
+
+```
+Sebelum diurutkan: [9, 7, 10, 8, 12, 11, 14, 13]
+
+Langkah ke-1: [7, 9, 10, 8, 12, 11, 14, 13]
+Langkah ke-2: [7, 8, 10, 9, 12, 11, 14, 13]
+Langkah ke-3: [7, 8, 9, 10, 12, 11, 14, 13]
+Langkah ke-4: [7, 8, 9, 10, 12, 11, 14, 13]
+Langkah ke-5: [7, 8, 9, 10, 11, 12, 14, 13]
+Langkah ke-6: [7, 8, 9, 10, 11, 12, 14, 13]
+Langkah ke-7: [7, 8, 9, 10, 11, 12, 13, 14]
+
+Setelah diurutkan: [7, 8, 9, 10, 11, 12, 13, 14]
+```
+
+Metode lain yang dapat digunakan untuk mengimplementasikan algoritma pengurutan seleksi adalah dengan mencari posisi dari elemen terbesar. Selanjutnya, elemen terbesar tersebut ditempatkan pada posisi paling kanan. Untuk melakukan hal ini, kita dapat menggunakan kode berikut:
+
+```c
+void selection_sort(int *array, int size) {
+    int maxposition, temp;
+
+    for (int i = size - 1; i > 0; --i) {
+        maxposition = 0;
+
+        for (int j = 1; j < i + 1; ++j)
+            if (array[j] > array[maxposition])
+                maxposition = j;
+
+        temp = array[i];
+        array[i] = array[maxposition];
+        array[maxposition] = temp;
+    }
+}
+```
+
+Contoh penggunaan dari fungsi di atas adalah sebagai berikut:
+
+- **Contoh 11.c** [File](../src/Contoh_11.c)
+
+```c
+#include <stdio.h>
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+void selection_sort(int *array, int size) {
+    int maxposition, temp, step = 1;
+
+    for (int i = size - 1; i > 0; --i) {
+        printf("Langkah ke-%d: ", step);
+
+        maxposition = 0;
+
+        for (int j = 1; j < i + 1; ++j)
+            if (array[j] > array[maxposition])
+                maxposition = j;
+
+        temp = array[i];
+        array[i] = array[maxposition];
+        array[maxposition] = temp;
+
+        print_array(array, size);
+        ++step;
+    }
+}
+
+main(int argc, char const *argv[]) {
+    int data[8] = {9, 7, 10, 8, 12, 11, 14 , 13};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    selection_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
