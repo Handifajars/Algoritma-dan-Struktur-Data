@@ -43,7 +43,7 @@ bool sequential_search(int array[], size_t size, int value) {
 
 Contoh penggunaan dari fungsi di atas dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 1.c** [File](../src/Contoh_1.c)
+- **Contoh 1.c** [File](../src/Algoritma/Contoh_1.c)
 
 ```c
 #include <stdio.h>
@@ -110,7 +110,7 @@ Dengan menggunakan metode pencarian beruntun (*sequential search*) atau yang jug
 
 Pada contoh kode program di atas, fungsi `sequential_search()` akan mengembalikan nilai `true` jika nilai yang dicari ditemukan di dalam *array* data dan `false` jika tidak ditemukan. Pada beberapa kasus, terkadang kita ingin mengetahui indeks dari nilai yang ditemukan, bukan hanya sekedar informasi `true` atau `false` saja. Untuk memenuhi kebutuhan seperti ini, kita dapat memodifikasi kode di atas menjadi seperti berikut:
 
-- **Contoh 2.c** [File](../src/Contoh_2.c)
+- **Contoh 2.c** [File](../src/Algoritma/Contoh_2.c)
 
 ```c
 #include <stdio.h>
@@ -175,7 +175,7 @@ Nilai -1 yang terdapat pada hasil di atas digunakan untuk mendandakan bahwa nila
 
 Dua kode program yang di atas sebenarnya dapat diterapkan untuk *array* yang datanya terurut maupun tidak terurut. Akan tetapi untuk kasus *array* yang datanya terurut kita dapat melakukan penghematan proses pencarian, yaitu dengan menghentikan pencarian ketika nilai yang kita cari lebih kecil dari salah satu nilai *array* pada posisi tertentu (ini pada *array* terurut) atau dengan kata lain mencegah proses agar tidak melanjutkan pencarian sampai akhir data (tidak perlu dicari sampai akhir jika data yang diinginkan sudah ketemu), pada kasus ini, untuk data yang berjumlah kecil tidak akan terasa lama prosesnya, tapi untuk data yang berjumlah sangat besar akan baru terasa lama prosesnya. Untuk mengimplementasikan hal ini kita dapat menggunakan kode berikut:
 
-- **Contoh 3.c** [File](../src/Contoh_3.c)
+- **Contoh 3.c** [File](../src/Algoritma/Contoh_3.c)
 
 ```c
 #include <stdio.h>
@@ -276,7 +276,7 @@ int binary_search(int array[], int first, int last, int value) {
 
 Contoh kode program di bawah ini menunjukkan penggunaan fungsi di atas:
 
-- **Contoh 4.c** [File](../src/Contoh_4.c)
+- **Contoh 4.c** [File](../src/Algoritma/Contoh_4.c)
 
 ```c
 #include <stdio.h>
@@ -367,7 +367,7 @@ int binary_search(int array[], int first, int last, int value) {
 
 Contoh penerapannya dapat dilihat pada kode di bawah ini:
 
-- **Contoh 5.c** [File](../src/Contoh_5.c)
+- **Contoh 5.c** [File](../src/Algoritma/Contoh_5.c)
 
 ```c
 #include <stdio.h>
@@ -455,7 +455,7 @@ void bubble_sort(int *array, int size) {
 
 Contoh penggunaan fungsi `bubble_sort()` di atas dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 6.c** [File](../src/Contoh_6.c)
+- **Contoh 6.c** [File](../src/Algoritma/Contoh_6.c)
 
 ```c
 #include <stdio.h>
@@ -523,7 +523,7 @@ Elemen yang sudah terurut pada langkah pertama akan diisolasi dan tidak akan dil
 
 Untuk memudahkan dalam memahami cara kerja algoritma pengurutan gelembung kita dapat mengubah kode program sebelumnya menjadi seperti berikut:
 
-- **Contoh 7.c** [File](../src/Contoh_7.c)
+- **Contoh 7.c** [File](../src/Algoritma/Contoh_7.c)
 
 ```c
 #include <stdio.h>
@@ -612,7 +612,7 @@ void bubble_sort(int *array, size_t size) {
 
 Jika ingin melihat posisi elemen-elemen pada setiap langkah, kita dapat mengubah kode di atas menjadi seperti berikut:
 
-- **Contoh 8.c** [File](../src/Contoh_8.c)
+- **Contoh 8.c** [File](../src/Algoritma/Contoh_8.c)
 
 ```c
 #include <stdio.h>
@@ -715,7 +715,7 @@ void selection_sort(int *array, int size) {
 
 Contoh penggunaan fungsi `selection_sort()` di atas dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 9.c** [File](../src/Contoh_9.c)
+- **Contoh 9.c** [File](../src/Algoritma/Contoh_9.c)
 
 ```c
 #include <stdio.h>
@@ -779,7 +779,7 @@ Pada algoritma pengurutan seleksi, kita mencari posisi dari elemen terkecil. Pro
 
 Untuk mengetahui posisi elemen pada setiap langkah, kita dapat mengubah kode program di atas menjadi seperti berikut:
 
-- **Contoh 10.c** [File](../src/Contoh_10.c)
+- **Contoh 10.c** [File](../src/Algoritma/Contoh_10.c)
 
 ```c
 #include <stdio.h>
@@ -872,7 +872,7 @@ void selection_sort(int *array, int size) {
 
 Contoh penggunaan dari fungsi di atas adalah sebagai berikut:
 
-- **Contoh 11.c** [File](../src/Contoh_11.c)
+- **Contoh 11.c** [File](../src/Algoritma/Contoh_11.c)
 
 ```c
 #include <stdio.h>
@@ -961,7 +961,7 @@ void insertion_sort(int *array, size_t size) {
 
 Contoh penggunaannya dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 12.c** [File](../src/Contoh_12.c)
+- **Contoh 12.c** [File](../src/Algoritma/Contoh_12.c)
 
 ```c
 #include <stdio.h>
@@ -1025,7 +1025,7 @@ Pada algoritma pengurutan sisipan, program akan menyisipkan suatu elemen *array*
 
 Untuk lebih mudah dalam memahami proses di dalam algoritma pengurutan sisipan, kita dapat mengubah kode program di atas menjadi seperti berikut:
 
-- **Contoh 13.c** [File](../src/Contoh_13.c)
+- **Contoh 13.c** [File](../src/Algoritma/Contoh_13.c)
 
 ```c
 #include <stdio.h>
@@ -1138,7 +1138,7 @@ void shell_sort(int *array, size_t size) {
 
 Contoh penggunaan fungsi 'shell_sort()' dapat dilihat pada kode program di bawah ini:
 
-- **Contoh 14.c** [File](../src/Contoh_14.c)
+- **Contoh 14.c** [File](../src/Algoritma/Contoh_14.c)
 
 ```c
 #include <stdio.h>
