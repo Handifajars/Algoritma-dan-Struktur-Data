@@ -1,10 +1,8 @@
 # Algoritma dan Struktur Data
 
-> Maaf, saya bagi menjadi 2 karena materi terlalu panjang untuk 1 halaman
-
 ### Daftar isi:
 
-- **Materi di bawah ini dapat ditemukan di ->** [Algoritma dan Struktur Data Bagian 1](/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md)
+- **Materi di bawah ini dapat ditemukan di ->** [Algoritma](/Materi/Algoritma.md)
 
 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
 2. Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)
@@ -13,7 +11,7 @@
 5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
 6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
 
-- **Materi di bawah ini dapat ditemukan di ->** [Algoritma dan Struktur Data Bagian 2](/Materi/Algoritma_dan_Struktur_Data_Bagian_2.md)
+- **Materi di bawah ini dapat ditemukan di ->** [Struktur Data](/Materi/Struktur_Data.md)
 
 7. Membuat Struktur Data Tumpukan (Stack) dengan Array
 8. Membuat Struktur Data Antrian (Queue) dengan Array
