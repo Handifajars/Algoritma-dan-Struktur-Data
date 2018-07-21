@@ -4,7 +4,7 @@
 
 **File ini berisi materi:**
 
-> Klik untuk menuju ke penjelasan
+> Klik salah satu untuk menuju ke pembahasan
 
 1. [Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#1-mengimplementasikan-algoritma-pencarian-beruntun-sequential-search)
 2. [Mengimplementasikan Algoritma Pencarian Bagi-Dua (*Binary Search*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/penulisan/Materi/Algoritma_dan_Struktur_Data_Bagian_1.md#2-mengimplementasikan-algoritma-pencarian-bagi-dua-binary-search)
@@ -1085,7 +1085,7 @@ Menyisipkan nilai 8     : [4, 5, 6, 7, 8, 9, 10, 11, 12]
 Setelah diurutkan       : [4, 5, 6, 7, 8, 9, 10, 11, 12]
 ```
 
-# 5. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
+## 6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
 
 **Kasus**
 
