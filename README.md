@@ -22,7 +22,7 @@ Kita ingin melakukan pencarian data di dalam suatu *array*, kita bisa menggunaka
 
 Di dalam bahasa C, algoritma pencarian berutun dapat diimplementasikan menggunakan fungsi berikut:
 
-```c++
+```c
 bool sequential_search(int array[], size_t size, int value) {
     int pos = 0;
     bool found = false;
@@ -42,7 +42,7 @@ Contoh penggunaan dari fungsi di atas dapat dilihat pada kode program di bawah i
 
 - **Contoh 1.c**
 
-```c++
+```c
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -76,11 +76,11 @@ int main(int argc, char const *argv[]) {
     int data[5] = {300, 200, 500, 400, 100};
     size_t size = sizeof(data) / sizeof(data[0]);
 
-    /* Menampilkan elemen dari array */
+    // Menampilkan elemen dari array
     printf("Isi array: ");
     print_array(data, size);
 
-    /* Mencari nilai */
+    // Mencari nilai
     printf("\nNilai 200 %s\n", sequential_search(data, size, 200) ? "ditemukan" : "tidak ditemukan");
     printf("Nilai 400 %s\n", sequential_search(data, size, 400) ? "ditemukan" : "tidak ditemukan");
     printf("Nilai 700 %s\n", sequential_search(data, size, 700) ? "ditemukan" : "tidak ditemukan");
@@ -109,7 +109,7 @@ Pada contoh kode program di atas, fungsi `sequential_search()` akan mengembalika
 
 - **Contoh 2.c**
 
-```c++
+```c
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -143,11 +143,11 @@ int main(int argc, char const *argv[]) {
     int data[5] = {300, 200, 500, 400, 100};
     size_t size = sizeof(data) / sizeof(data[0]);
 
-    /* Menampilkan elemen dari array */
+    // Menampilkan elemen dari array
     printf("Isi array: ");
     print_array(data, size);
 
-    /* Mencari nilai */
+    // Mencari nilai
     printf("\nNilai 200: %d\n", sequential_search(data, size, 200));
     printf("Nilai 400: %d\n", sequential_search(data, size, 400));
     printf("Nilai 700: %d\n", sequential_search(data, size, 700));
@@ -174,7 +174,7 @@ Dua kode program yang di atas sebenarnya dapat diterapkan untuk *array* yang dat
 
 - **Contoh 3.c**
 
-```c++
+```c
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -211,11 +211,11 @@ int main(int argc, char const *argv[]) {
     int data[5] = {100, 200, 300, 400, 500};
     size_t size = sizeof(data) / sizeof(data[0]);
 
-    /* Menampilkan elemen dari array */
+    // Menampilkan elemen dari array
     printf("Isi array: ");
     print_array(data, size);
 
-    /* Mencari nilai */
+    // Mencari nilai
     printf("\nNilai 100: %d\n", sequential_search(data, size, 100));
     printf("Nilai 250: %d\n", sequential_search(data, size, 250));
     printf("Nilai 300: %d\n", sequential_search(data, size, 300));
@@ -248,7 +248,7 @@ Kita ingin melakukan pencarian data di dalam suatu *array* menggunakan algoritma
 
 Di dalam bahasa C, algoritma pencarian bagi-dua diimplementasikan menggunakan fungsi berikut:
 
-```c++
+```c
 int binary_search(int array[], int first, int last, int value) {
     int middle;
     bool found = false;
@@ -273,7 +273,7 @@ Contoh kode program di bawah ini menunjukkan penggunaan fungsi di atas:
 
 - **Contoh 4.c**
 
-```c++
+```c
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -311,10 +311,11 @@ main(int argc, char const *argv[]) {
     int data[5] = {100, 200, 300, 400, 500};
     size_t size = sizeof(data) / sizeof(data[0]);
 
-    /* Menampilkan elemen array */
+    // Menampilkan elemen array
     printf("Isi array: ");
     print_array(data, size);
 
+    // Mencari nilai
     printf("\nIndeks dari nilai 200: %d\n", binary_search(data, 0, 4, 200));
     printf("Indeks dari nilai 400: %d\n", binary_search(data, 0, 4, 400));
     printf("Indeks dari nilai 700: %d\n", binary_search(data, 0, 4, 700));
@@ -343,7 +344,7 @@ Cara kerja algoritma pencarian bagi-dua adalah dengan membagi elemen-elemen *arr
 
 Algoritma pencarian bagi-dua juga dapat diimplementasikan menggunakan fungsi rekursi, seperti kode di bawah ini:
 
-```c++
+```c
 int binary_search(int array[], int first, int last, int value) {
     if (last < first)
         return -1;
@@ -363,7 +364,7 @@ Contoh penerapannya dapat dilihat pada kode di bawah ini:
 
 - **Contoh 5.c**
 
-```c++
+```c
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -396,10 +397,11 @@ main(int argc, char const *argv[]) {
     int data[5] = {100, 200, 300, 400, 500};
     size_t size = sizeof(data) / sizeof(data[0]);
 
-    /* Menampilkan elemen array */
+    // Menampilkan elemen array
     printf("Isi array: ");
     print_array(data, size);
 
+    // Mencari nilai
     printf("\nIndeks dari nilai 200: %d\n", binary_search(data, 0, 4, 200));
     printf("Indeks dari nilai 400: %d\n", binary_search(data, 0, 4, 400));
     printf("Indeks dari nilai 700: %d\n", binary_search(data, 0, 4, 700));
@@ -430,7 +432,7 @@ Kita ingin melakukan pengurutan data di dalam suatu *array* menggunakan algoritm
 
 Dalam bahasa C, algoritma pengurutan gelembung dapat diimplementasikan menggunakan fungsi berikut:
 
-```c++
+```c
 void bubble_sort(int *array, int size) {
     int temp;
 
@@ -446,10 +448,12 @@ void bubble_sort(int *array, int size) {
 
 Contoh penggunaan fungsi bubble_sort() di atas dapat dilihat pada kode program di bawah ini:
 
-```c++
+- **Contoh 6.c**
+
+```c
 #include <stdio.h>
 
-void bubble_sort(int *array, int size) {
+void bubble_sort(int *array, size_t size) {
     int temp;
 
     for (int i = 0; i < size - 1; ++i)
@@ -502,7 +506,7 @@ Setelah diurutkan: [7, 8, 9, 10, 11, 12, 13, 14]
 
 Dalam proses pengurutan data menggunakan algoritma gelembung, n elemen data akan diurutkan melalui n-1 langkah (direpresentasikan menggunakan variabel `i`). Dalam setiap langkah, program akan membandingkan elemen ke-`j` dengan elemen ke-(`j-1`) secara berulang mulai dari elemen terakhir sampai elemen ke-(`i+1`). Jika `array[j]` lebih kecil dari `array[j-1]` maka kedua elemen tersebut akan ditukar menggunakan kode berikut:
 
-```c++
+```c
 temp = array[j];
 array[j] = array[j - 1];
 array[j - 1] = temp;
@@ -510,5 +514,79 @@ array[j - 1] = temp;
 
 Elemen yang sudah terurut pada langkah pertama akan diisolasi dan tidak akan dilibatkan dalam proses perbandingan elemen di langkah kedua. Elemen yang sudah terurut pada langkah kedua tidak akan dilibatkan dalam proses perbandingan di langkah ketiga, dan seterusnya.
 
-Untuk memudahkan dalam 
+Untuk memudahkan dalam memahami cara kerja algoritma pengurutan gelembung kita dapat mengubah kode program sebelumnya menjadi seperti berikut:
+
+- **Contoh 7.c**
+
+```c
+#include <stdio.h>
+
+void print_array(int array[], size_t size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+
+        if (i != size - 1)
+            printf(", ");
+    }
+    printf("]\n");
+}
+
+void bubble_sort(int *array, size_t size) {
+    int temp;
+
+    for (int i = 0; i < size - 1; ++i) {
+        printf("Langkah ke-%d: ", i + 1);
+
+        for (int j = size - 1; j > i; --j)
+            if (array[j] < array[j - 1]) {
+                temp = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = temp;
+            }
+        
+        print_array(array, size);
+    }
+}
+
+main(int argc, char const *argv[]) {
+    int data[9] = {12, 10, 6, 11, 5, 4, 7, 9, 8};
+    size_t size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan elemen array sebelum diurutkan
+    printf("Sebelum diurutkan: ");
+    print_array(data, size);
+
+    // Mengurutkan array
+    bubble_sort(data, size);
+
+    // Menampilkan elemen array setelah diurutkan
+    printf("Setelah diurutkan: ");
+    print_array(data, size);
+
+    return 0;
+}
+```
+
+Hasil program:
+
+```
+Sebelum diurutkan: [12, 10, 6, 11, 5, 4, 7, 9, 8]
+Langkah ke-1: [4, 12, 10, 6, 11, 5, 7, 8, 9]
+Langkah ke-2: [4, 5, 12, 10, 6, 11, 7, 8, 9]
+Langkah ke-3: [4, 5, 6, 12, 10, 7, 11, 8, 9]
+Langkah ke-4: [4, 5, 6, 7, 12, 10, 8, 11, 9]
+Langkah ke-5: [4, 5, 6, 7, 8, 12, 10, 9, 11]
+Langkah ke-6: [4, 5, 6, 7, 8, 9, 12, 10, 11]
+Langkah ke-7: [4, 5, 6, 7, 8, 9, 10, 12, 11]
+Langkah ke-8: [4, 5, 6, 7, 8, 9, 10, 11, 12]
+Setelah diurutkan: [4, 5, 6, 7, 8, 9, 10, 11, 12]
+```
+
+Pada contoh program di atas kita mengurutkan data yang elemennya berjumlah 9. Oleh karena itu, diperlukan 8 langkah untuk mengurutkan data tersebut. Posisi elemen pada setiap langkah dapat kita lihat pada hasil yang ditampilkan di atas.
+
+Metode yang digunakan di atas adalah dengan menempatkan elemen terkecil di posisi paling kiri. Setelah itu elemen tersebut diisolasi atau diikat dan tidak dilibatkan pada proses berikutnya. Dalam metode tersebut, elemen-elemen kiri merupakan elemen-elemen yang sudah terurut. Kita juga dapat menggunakan metode lain untuk mengimplementasikan algoritma pengurutan gelembung, yaitu dengan menempatkan elemen terbesar di posisi paling kanan dan elemen tersebut tidak dilibatkan pada proses berikutnya. Dengan cara seperti ini, elemen-elemen kanan akan menjadi elemen-elemen yang pertama kali diurutkan. Kode di bawah ini akan menunjukan konsep tersebut:
+
+```c
+
 > Raharjo, Budi. 2016. Kumpulan Solusi Pemrograman C. Bandung: INFORMATIKA.
