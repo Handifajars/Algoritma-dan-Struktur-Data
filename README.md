@@ -11,7 +11,7 @@
 5. Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)
 6. Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)
 
-----------------------------------------
+---
 
 ## Struktur Data
 
