@@ -433,8 +433,6 @@ Indeks dari nilai 900: -1
 
 ## 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
 
-![alt text](../Images/sort_array.jpg)
-
 **Kasus**
 
 Kita ingin melakukan pengurutan data di dalam suatu *array* menggunakan algoritma pengurutan gelembung (*bubble sort*)
@@ -1216,6 +1214,8 @@ Setelah diurutkan: [4, 5, 6, 7, 8, 9, 10, 11, 12]
 **Penjelasan**
 
 Algoritma pengurutan *Shell* merupakan bentuk penyederhanaan dari algoritma pengurutan sisipan. Dengan demikian, pada dasarnya pengurutan *Shell* juga menggunakan algoritma pengurutan sisipan. Namun, dalam algoritma pengurutan *Shell*, elemen-elemen *array* dibagi menjadi beberapa *sub_array*. Selanjutnya, setiap *sub_array* tersebut diurutkan menggunakan algoritma sisipan. Hal ini bertujuan untuk mengurangi banyaknya proses pergeseran elemen yang terjadi di dalam algoritma pengurutan sisipan.
+
+![alt text](../Images/sort_array.jpg)
 
 ---
 
