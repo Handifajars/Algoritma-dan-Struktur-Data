@@ -1,5 +1,7 @@
 # Algoritma dan Struktur Data
 
+![alt text](../Images/DcB-2hmXUAAbL_1.jpg)
+
 ## Algoritma
 
 - **Materi di bawah ini dapat ditemukan di ->** [Algoritma](/Materi/Algoritma.md)
