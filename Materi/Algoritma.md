@@ -13,7 +13,7 @@
 5. [Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/master/Materi/Algoritma.md#5-mengimplementasikan-algoritma-pengurutan-sisipan-insertion-sort)
 6. [Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/master/Materi/Algoritma.md#6-mengimplementasikan-algoritma-pengurutan-shell-shell-sort)
 
-![alt text](../Images/algo.png)
+![alt text](../Images/algo.jpg)
 
 ---
 
