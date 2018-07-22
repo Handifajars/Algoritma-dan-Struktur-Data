@@ -13,6 +13,8 @@
 5. [Mengimplementasikan Algoritma Pengurutan Sisipan (*Insertion Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/master/Materi/Algoritma.md#5-mengimplementasikan-algoritma-pengurutan-sisipan-insertion-sort)
 6. [Mengimplementasikan Algoritma Pengurutan Shell (*Shell Sort*)](https://github.com/mramirid/Algoritma-dan-Struktur-Data/blob/master/Materi/Algoritma.md#6-mengimplementasikan-algoritma-pengurutan-shell-shell-sort)
 
+![alt text](../Images/algo.png)
+
 ---
 
 ## 1. Mengimplementasikan Algoritma Pencarian Beruntun (*Sequential Search*)
@@ -520,6 +522,8 @@ temp = array[j];
 array[j] = array[j - 1];
 array[j - 1] = temp;
 ```
+
+![alt text](../Images/swap_integers_without_additional_variable.jpg)
 
 Elemen yang sudah terurut pada langkah pertama akan diisolasi dan tidak akan dilibatkan dalam proses perbandingan elemen di langkah kedua. Elemen yang sudah terurut pada langkah kedua tidak akan dilibatkan dalam proses perbandingan di langkah ketiga, dan seterusnya.
 
