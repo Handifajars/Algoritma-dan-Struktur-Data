@@ -1,6 +1,6 @@
 # Algoritma dan Struktur Data
 
-![alt text](../Images/DcB-2hmXUAAbL_1.jpg)
+![alt text](/Images/Programming.jpg)
 
 ## Algoritma
 
