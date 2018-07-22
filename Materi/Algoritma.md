@@ -431,6 +431,8 @@ Indeks dari nilai 900: -1
 
 ## 3. Mengimplementasikan Algoritma Pengurutan Gelembung (*Bubble Sort*)
 
+![alt text](../Images/sort_array.jpg)
+
 **Kasus**
 
 Kita ingin melakukan pengurutan data di dalam suatu *array* menggunakan algoritma pengurutan gelembung (*bubble sort*)
