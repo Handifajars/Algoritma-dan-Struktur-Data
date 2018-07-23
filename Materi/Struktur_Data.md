@@ -379,7 +379,7 @@ struct linked_list {
 Operasi yang dapat diterapkan *linked list* sebenarnya cukup banyak, tapi kita hanya akan mengimplementasikan beberapa fungsi seperti yang terdapat pada kode program di bawah ini:
 
 - **Contoh_3.c** [Link to File](../src/Struktur_Data/Contoh_3.c)
-    - [VERSI LENGKAP (C++)](../src/Struktur_Data/Contoh_3.1.cpp)
+    - [VERSI LENGKAP (C++)](../src/Struktur_Data/C++/Contoh_3.1.cpp)
 
 ```c
 #include <stdio.h>
