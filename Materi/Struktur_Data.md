@@ -4,8 +4,6 @@
 
 # Struktur Data
 
----
-
 **File ini berisi:**
 
 > Klik salah satu untuk menuju ke pembahasan
