@@ -1,8 +1,8 @@
 [**KEMBALI**](../README.md)
 
-# Struktur Data
-
 > Saya harap kamu minimal sudah memahami dengan baik konsep penggunaan pointer dan operasi-operasi yang berhubungan dengan pointer.
+
+# Struktur Data
 
 ---
 
