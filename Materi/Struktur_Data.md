@@ -20,7 +20,7 @@
 
 ---
 
-![yo dawg](../Images/yo_dawg.jpg)
+![yo dawg](../Images/quote-i-will-in-fact-claim-that-the-difference-between-a-bad-programmer-and-a-good-one-is-linus-torvalds-59-24-52.jpg)
 
 ---
 
